@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Process Flow Diagram Builder | Tool Portal</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="flow-builder.css">
+  <script src="../../js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="back-link" href="../../index.html">&larr; Back to portal</a>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark theme: off</button>
+  </header>
+
+  <main>
+    <h1>Process Flow Diagram Builder</h1>
+    <p class="intro">Type your process, one step per line, and a flowchart is drawn as you type.</p>
+
+    <div class="builder">
+      <section class="panel" aria-labelledby="input-heading">
+        <h2 id="input-heading">Your process</h2>
+
+        <details class="help">
+          <summary>How to write your process</summary>
+          <ul>
+            <li>Write one step per line, in order. The Start and End shapes are added for you.</li>
+            <li>Begin a line with <code>?</code> for a decision, for example <code>? Item in stock?</code></li>
+            <li>Right after a decision, add <code>yes:</code> and <code>no:</code> lines for what happens on each answer. Both paths join up again at the next line.</li>
+          </ul>
+        </details>
+
+        <label for="process-input" class="visually-hidden">Process steps, one per line</label>
+        <textarea id="process-input" rows="12" spellcheck="false" autocomplete="off"></textarea>
+
+        <div class="button-row">
+          <button type="button" id="load-example" class="button">Load example</button>
+          <button type="button" id="clear-input" class="button">Clear</button>
+        </div>
+
+        <ul id="messages" class="messages" aria-live="polite"></ul>
+      </section>
+
+      <section class="panel" aria-labelledby="diagram-heading">
+        <h2 id="diagram-heading">Your diagram</h2>
+        <div id="diagram" class="diagram"></div>
+        <div class="button-row">
+          <button type="button" id="download-svg" class="button">Download as SVG image</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="flow-builder.js"></script>
+</body>
+</html>

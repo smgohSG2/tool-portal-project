@@ -10,7 +10,7 @@
 - `index.html` — portal homepage
 - `css/styles.css` — shared styles and the light/dark colors
 - `js/theme.js` — light/dark toggle, shared by every page
-- `tools/tool-1/index.html` — placeholder tool page (to be replaced by the first real tool)
+- `tools/flow-builder/` — the first tool: `index.html` (page), `flow-builder.js` (reads the text and draws the diagram), `flow-builder.css` (styles for this tool only)
 
 Update this section as files and folders are added.
 
@@ -30,8 +30,8 @@ A portal where students try small tools for Business Process Management.
 
 ### Phases
 1. **Phase 1: the portal plus its first tool.**
-   - Portal: homepage, shared styles, light/dark toggle. **Done:** homepage with a placeholder "Tool 1 — coming soon" card that opens its page and returns via "Back to portal". Styling is deliberately plain and neutral until a visual design is chosen.
-   - First tool: a process flow diagram builder. The student types one step per line, and a flowchart is drawn on the page.
+   - Portal: homepage, shared styles, light/dark toggle. **Done:** homepage whose card opens a tool page and returns via "Back to portal". Styling is deliberately plain and neutral until a visual design is chosen.
+   - First tool: a process flow diagram builder. The student types one step per line, and a flowchart is drawn on the page. **Done:** replaces the placeholder card. Format: a plain line is a step; `? question` is a decision, followed by `yes:` and/or `no:` lines; Start and End are added automatically. Includes a "Download as SVG image" button (the file is always light-coloured).
    - Exactly one tool in this phase.
 2. **Phase 2: more tools.** Add further tools one at a time. Which ones is still to be decided.
 

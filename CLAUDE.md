@@ -5,9 +5,12 @@
 - No frameworks and no build step: files open directly in a browser.
 
 ## Project Structure
-The repository is nearly empty for now.
 - `README.md` — project readme
 - `CLAUDE.md` — this file
+- `index.html` — portal homepage
+- `css/styles.css` — shared styles and the light/dark colors
+- `js/theme.js` — light/dark toggle, shared by every page
+- `tools/tool-1/index.html` — placeholder tool page (to be replaced by the first real tool)
 
 Update this section as files and folders are added.
 
@@ -27,7 +30,7 @@ A portal where students try small tools for Business Process Management.
 
 ### Phases
 1. **Phase 1: the portal plus its first tool.**
-   - Portal: homepage, shared styles, light/dark toggle.
+   - Portal: homepage, shared styles, light/dark toggle. **Done:** homepage with a placeholder "Tool 1 — coming soon" card that opens its page and returns via "Back to portal". Styling is deliberately plain and neutral until a visual design is chosen.
    - First tool: a process flow diagram builder. The student types one step per line, and a flowchart is drawn on the page.
    - Exactly one tool in this phase.
 2. **Phase 2: more tools.** Add further tools one at a time. Which ones is still to be decided.
